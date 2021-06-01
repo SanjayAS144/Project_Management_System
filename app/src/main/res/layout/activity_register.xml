@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:scrollbarSize="0dp"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity.RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:id="@+id/welcometext"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Welcome to,"
+            android:textColor="#5C54D9"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcometext"
+            android:id="@+id/layout1"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="BMSIT"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_sans"
+            android:text=" Project Manager"
+            android:textColor="#5C54D9"
+            android:textSize="16sp" />
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/oncanclebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#00000000"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/closeicon"
+            android:tint="#000000" />
+
+
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_below="@id/layout1"
+            android:layout_height="200dp"
+            android:id="@+id/graph"
+            android:scaleType="fitEnd"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/visualgraph"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/graph"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans"
+                android:layout_below="@id/layout1"
+                android:layout_marginStart="20dp"
+                android:text="SignUp to,"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans"
+                android:layout_below="@id/layout1"
+                android:layout_marginStart="20dp"
+                android:text="Start analyzing your project."
+                android:textColor="#5C54D9"
+                android:textSize="14sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                app:helperText="User your college id"
+                android:hint="Email"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="#B95A5A5A"
+                android:textCursorDrawable="@drawable/black_curser"
+                app:hintTextColor="#7C7C7C"
+                app:placeholderTextColor="#7C7C7C">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:inputType="textEmailAddress"
+                    android:letterSpacing="0.1"
+                    android:textSize="19sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:hint="Group Name"
+                android:textCursorDrawable="@drawable/black_curser"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="#B95A5A5A"
+                app:helperText="Example : SG6"
+                app:hintTextColor="#7C7C7C"
+                app:placeholderText="ex:SG21"
+                app:placeholderTextColor="#7C7C7C">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/group_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:inputType="textCapCharacters"
+                    android:letterSpacing="0.1"
+                    android:textSize="19sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                app:passwordToggleEnabled="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:textCursorDrawable="@drawable/black_curser"
+                android:hint="Password"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="#B95A5A5A"
+                app:hintTextColor="#7C7C7C"
+                app:placeholderTextColor="#7C7C7C">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:drawablePadding="-8dp"
+                    android:inputType="textPassword"
+                    android:letterSpacing="0.1"
+                    android:textSize="19sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                app:cornerRadius="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat"
+                android:backgroundTint="#5C54D9"
+                android:text="Sign up"
+                android:id="@+id/signUp"
+                app:rippleColor="#fff"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>

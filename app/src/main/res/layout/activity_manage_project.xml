@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#f3a370"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ManageProjectActivity">
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/arrow_back_ios"
+        app:tint="#FFF"
+        android:id="@+id/back_btn"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Project Boards"
+        android:layout_below="@id/back_btn"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:textSize="24sp"
+        android:fontFamily="@font/noto_sans"
+        android:textStyle="bold"
+        android:textColor="#FFF"
+        android:id="@+id/project_board"
+        />
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="25dp"
+        android:layout_below="@+id/member1_usn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="0dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#fff">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:id="@+id/member1_image"
+            android:scaleType="centerCrop"
+            android:layout_height="match_parent"
+            android:src="@drawable/profileimage1"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/project_type_card"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/project_board"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="10dp"
+        app:cardMaxElevation="8dp"
+        android:layout_marginTop="50dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/dot_indicator"
+                android:tint="#f3a370"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ongoing"
+                android:textColor="#f3a370"
+                android:textStyle="bold"
+                android:fontFamily="@font/noto_sans"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="80dp"
+                android:src="@drawable/dot_indicator"
+                android:tint="#aebac9"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completed"
+                android:textColor="#aebac9"
+                android:textStyle="bold"
+                android:fontFamily="@font/noto_sans"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/project_type_card"
+        android:background="#FFF"
+        android:layout_marginTop="-30dp"
+        android:layout_height="match_parent">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:id="@+id/project_list"/>
+
+        </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fab"
+            android:elevation="8dp"
+            android:backgroundTint="#FFF"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="20dp"
+            android:visibility="visible"
+            app:borderWidth="0dp"
+            android:src="@drawable/add"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

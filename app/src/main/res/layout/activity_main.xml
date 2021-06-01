@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F7FC"
+    android:scrollbarSize="0dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="#F8F7FC">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/menuBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/menu" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                android:id="@+id/heyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hey, "
+                android:fontFamily="@font/artifika"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/heyText"
+                android:text="Sanjay"
+                android:id="@+id/profile_name"
+                android:fontFamily="@font/artifika"
+                android:textColor="#0049D6"
+                android:textSize="20sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/heyText"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:id="@+id/membertext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Members of "
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/group_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/group_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/membertext"
+                    android:fontFamily="@font/montserrat"
+                    android:text="SG6"
+                    android:textColor="#0049D6"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/membertext"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/group_name"
+                    android:fontFamily="@font/montserrat"
+                    android:text=" are."
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/group_name"
+                    app:layout_constraintStart_toEndOf="@+id/group_name"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/mainLayout1"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#F8F7FC">
+
+            <HorizontalScrollView
+                android:id="@+id/members_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbarSize="0dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card1"
+                        android:layout_width="140dp"
+                        android:layout_height="180dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="8dp"
+                        android:outlineAmbientShadowColor="#CC4C4C"
+                        android:outlineSpotShadowColor="#CC4C4C"
+                        android:requiresFadingEdge="vertical"
+                        android:shadowDx="0"
+                        android:shadowDy="-30"
+                        app:cardBackgroundColor="#D6E2F9"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="8dp"
+                        app:cardMaxElevation="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="visible"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="You"
+                                android:textSize="16sp"
+                                android:textColor="#000"
+                                android:id="@+id/you"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sanjay"
+                                android:id="@+id/member1_name"
+                                android:textColor="#0049D6"
+                                android:layout_below="@id/you"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="sanjayas430@gmail.com"
+                                android:layout_marginEnd="20dp"
+                                android:textColor="#555555"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:layout_below="@id/member1_name"
+                                android:id="@+id/member1_email"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginStart="10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="6362952352"
+                                android:textColor="#555555"
+                                android:layout_below="@id/member1_email"
+                                android:id="@+id/member1_phone"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginStart="10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1BY18EC144"
+                                android:textColor="#555555"
+                                android:layout_below="@id/member1_phone"
+                                android:id="@+id/member1_usn"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginStart="10dp"/>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                app:cardCornerRadius="25dp"
+                                android:layout_below="@+id/member1_usn"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="0dp"
+                                app:strokeWidth="1dp"
+                                app:strokeColor="#fff">
+
+                                <pl.droidsonroids.gif.GifImageView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/member1_image"
+                                    android:scaleType="centerCrop"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/profileimage1"/>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+
+
+                        </RelativeLayout>
+
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card2"
+                        android:layout_width="140dp"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/card1"
+                        android:elevation="8dp"
+                        android:outlineAmbientShadowColor="#0049d6"
+                        android:outlineSpotShadowColor="#0049d6"
+                        app:cardBackgroundColor="#FFF"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="8dp"
+                        app:cardMaxElevation="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="visible"
+                            android:id="@+id/memberavailable1"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Member 1"
+                                android:textSize="16sp"
+                                android:textColor="#000"
+                                android:id="@+id/member2"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sanjay"
+                                android:id="@+id/member2_name"
+                                android:textColor="#0049D6"
+                                android:layout_below="@id/member2"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="sanjayas430@gmail.com"
+                                android:layout_marginEnd="20dp"
+                                android:textColor="#555555"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:layout_below="@id/member2_name"
+                                android:id="@+id/member2_email"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginStart="10dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="6362952352"
+                                android:textColor="#555555"
+                                android:layout_below="@id/member2_email"
+                                android:id="@+id/member2_phone"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginStart="10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1BY18EC144"
+                                android:textColor="#555555"
+                                android:layout_below="@id/member2_phone"
+                                android:id="@+id/member2_usn"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginStart="10dp"/>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                app:cardCornerRadius="25dp"
+                                android:layout_below="@+id/member2_usn"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="0dp"
+                                app:strokeWidth="1dp"
+                                app:strokeColor="#0049D6">
+
+                                <pl.droidsonroids.gif.GifImageView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/member2_image"
+                                    android:scaleType="centerCrop"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/profileimage1"/>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:id="@+id/member2layout"
+                            android:visibility="gone"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_centerHorizontal="false"
+                                android:layout_marginTop="10dp"
+                                android:id="@+id/image1"
+                                android:src="@drawable/not_found"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/image1"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="Not On This App "/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:backgroundTint="#D6E2F9"
+                                android:text="Invite"
+                                android:id="@+id/invite1"
+                                android:textColor="#000"
+                                android:textAllCaps="false"
+                                android:fontFamily="@font/montserrat"/>
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card3"
+                        android:layout_width="140dp"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/card2"
+                        android:elevation="8dp"
+                        android:outlineAmbientShadowColor="#0049d6"
+                        android:outlineSpotShadowColor="#0049d6"
+                        app:cardBackgroundColor="#FFF"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="8dp"
+                        app:cardMaxElevation="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/memberavailable2"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Member 2"
+                                android:textSize="16sp"
+                                android:textColor="#000"
+                                android:id="@+id/member3"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sanjay"
+                                android:id="@+id/member3_name"
+                                android:textColor="#0049D6"
+                                android:layout_below="@id/member3"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="sanjayas430@gmail.com"
+                                android:layout_marginEnd="20dp"
+                                android:textColor="#555555"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:layout_below="@id/member3_name"
+                                android:id="@+id/member3_email"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginStart="10dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="6362952352"
+                                android:textColor="#555555"
+                                android:layout_below="@id/member3_email"
+                                android:id="@+id/member3_phone"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginStart="10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1BY18EC144"
+                                android:textColor="#555555"
+                                android:layout_below="@id/member3_phone"
+                                android:id="@+id/member3_usn"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginStart="10dp"/>
+
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                app:cardCornerRadius="25dp"
+                                android:layout_below="@+id/member3_usn"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="0dp"
+                                app:strokeWidth="1dp"
+                                app:strokeColor="#0049D6">
+
+                                <pl.droidsonroids.gif.GifImageView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/member3_image"
+                                    android:scaleType="centerCrop"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/profileimage1"/>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+                            android:id="@+id/member3layout"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_centerHorizontal="false"
+                                android:layout_marginTop="10dp"
+                                android:id="@+id/image2"
+                                android:src="@drawable/not_found"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/image2"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="Not On This App "/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:backgroundTint="#D6E2F9"
+                                android:text="Invite"
+                                android:id="@+id/invite2"
+                                android:textColor="#000"
+                                android:textAllCaps="false"
+                                android:fontFamily="@font/montserrat"/>
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card4"
+                        android:layout_width="140dp"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/card3"
+                        android:elevation="8dp"
+                        android:outlineAmbientShadowColor="#0049d6"
+                        android:outlineSpotShadowColor="#0049d6"
+                        app:cardBackgroundColor="#FFF"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="8dp"
+                        app:cardMaxElevation="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/memberavailable3"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Member 4"
+                                android:textSize="16sp"
+                                android:textColor="#000"
+                                android:id="@+id/member4"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sanjay"
+                                android:id="@+id/member4_name"
+                                android:textColor="#0049D6"
+                                android:layout_below="@id/member4"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="sanjayas430@gmail.com"
+                                android:layout_marginEnd="20dp"
+                                android:textColor="#555555"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:layout_below="@id/member4_name"
+                                android:id="@+id/member4_email"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginStart="10dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="6362952352"
+                                android:textColor="#555555"
+                                android:layout_below="@id/member4_email"
+                                android:id="@+id/member4_phone"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginStart="10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1BY18EC144"
+                                android:textColor="#555555"
+                                android:layout_below="@id/member4_phone"
+                                android:id="@+id/member4_usn"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginStart="10dp"/>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                app:cardCornerRadius="25dp"
+                                android:layout_below="@+id/member4_usn"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="0dp"
+                                app:strokeWidth="1dp"
+                                app:strokeColor="#0049D6">
+
+                                <pl.droidsonroids.gif.GifImageView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/member4_image"
+                                    android:scaleType="centerCrop"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/profileimage1"/>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:id="@+id/member4layout"
+                            android:visibility="gone"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_centerHorizontal="false"
+                                android:layout_marginTop="10dp"
+                                android:id="@+id/image3"
+                                android:src="@drawable/not_found"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/image3"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="Not On This App "/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:backgroundTint="#D6E2F9"
+                                android:text="Invite"
+                                android:id="@+id/invite3"
+                                android:textColor="#000"
+                                android:textAllCaps="false"
+                                android:fontFamily="@font/montserrat"/>
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/set_graph_layout"
+                android:layout_below="@id/members_layout"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:visibility="visible"
+                    android:id="@+id/layoutSetGoal"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:scaleType="fitStart"
+                        android:id="@+id/statgif"
+                        android:layout_marginTop="-10dp"
+                        android:src="@drawable/statastic"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set Your Goals for Today."
+                        android:textColor="#000"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="16sp"
+                        android:textAlignment="center"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_toRightOf="@id/statgif"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Set Your Daily Work as Your Goals and try To complete them."
+                            android:textColor="#7C7C7C"
+                            android:layout_marginStart="20dp"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="14sp"
+                            android:layout_marginEnd="20dp"
+                            android:textAlignment="center"
+                            />
+
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Set"
+                            android:id="@+id/set"
+                            android:textColor="#000"
+                            android:backgroundTint="#D6E2F9"
+                            android:fontFamily="@font/montserrat"
+                            android:textAllCaps="false"
+                            android:layout_marginTop="10dp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:id="@+id/graph_layout"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/goaltext"
+                        android:text="Your Goal for Today is."
+                        android:textStyle="bold"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="16sp"
+                        android:layout_marginStart="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textGoal"
+                        android:layout_below="@id/goaltext"
+                        android:text="Your Goal"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="16sp"
+                        android:layout_marginStart="20dp"/>
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:layout_width="250dp"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/pieChart"
+                        android:layout_marginBottom="10dp"
+                        android:layerType="software"
+                        android:layout_below="@id/textGoal"
+                        android:layout_height="250dp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="160dp"
+                app:cardCornerRadius="20dp"
+                android:layout_marginStart="20dp"
+                android:id="@+id/add_project_card"
+                android:layout_below="@id/set_graph_layout"
+                android:visibility="visible"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="200dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add\nNew\nProject"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/noto_sans"
+                        android:textStyle="bold"
+                        />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/add"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        app:tint="#9CB0D6" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/manage_card"
+                app:cardCornerRadius="20dp"
+                android:elevation="8dp"
+                app:cardMaxElevation="8dp"
+                android:layout_marginStart="20dp"
+                android:layout_below="@id/set_graph_layout"
+                android:visibility="gone"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="180dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="150dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:rotationY="180"
+                        android:layout_height="150dp"
+                        android:id="@+id/gif"
+                        android:src="@drawable/working_men"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/gif"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:textAlignment="center"
+                        android:layout_centerVertical="true"
+                        android:text="Manage all Your Project"
+                        android:textSize="20sp"/>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>
+

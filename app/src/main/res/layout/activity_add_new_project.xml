@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3a370"
+    tools:context=".Activity.AddNewProjectActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/arrow_back_ios"
+            app:tint="#FFF"
+            android:id="@+id/back_btn"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Project Details"
+            android:layout_below="@id/back_btn"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:textSize="24sp"
+            android:fontFamily="@font/noto_sans"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:id="@+id/project_board"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            android:layout_below="@id/project_board"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/working_men"
+                    android:layout_marginBottom="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Project Title"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/montserrat"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    app:hintTextColor="#000"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="true"
+                    app:boxStrokeColor="#000"
+                    android:hint="Title">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/project_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Short Description"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:counterEnabled="true"
+                    app:boxStrokeColor="#000"
+                    app:counterMaxLength="1000"
+                    android:cursorVisible="true"
+                    app:hintTextColor="#000"
+                    android:hint="Description">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/project_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:maxLength="1000"
+                        android:maxWidth="300dp"
+                        android:cursorVisible="true"
+                        android:maxHeight="100dp"
+                        android:gravity="top|left"
+                        android:lines="8"
+                        android:scrollbars="vertical"
+                        android:inputType="textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:id="@+id/save_btn"
+                    android:layout_marginBottom="40dp"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/segoeui"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:backgroundTint="#f1a16e"
+                    app:cornerRadius="10dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

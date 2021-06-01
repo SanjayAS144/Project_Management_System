@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#f5f6fb"
+    android:id="@+id/user_info_layout"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/layout_background"
+        android:paddingStart="20dp"
+        android:id="@+id/mainLayout1"
+        android:layout_height="120dp">
+
+        <TextView
+            android:id="@+id/heytext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/artifika"
+            android:layout_marginTop="20dp"
+            android:text="Hey"
+            android:textColor="#406fbf"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/there"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/heytext"
+            android:fontFamily="@font/artifika"
+            android:text=" There!"
+            android:textColor="#000"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/textdescrip"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/heytext"
+            android:fontFamily="@font/montserrat"
+            android:text="Let us know about you and your team "
+            android:textColor="#406fbf"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@id/mainLayout1"
+        android:id="@+id/mainLayout2"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/aboutyou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="About you"
+            android:textColor="#000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/dragicon"
+            app:layout_constraintEnd_toEndOf="@+id/aboutyou"
+            app:layout_constraintStart_toStartOf="@+id/aboutyou"
+            app:layout_constraintTop_toBottomOf="@+id/aboutyou" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@id/mainLayout1"
+        android:layout_toRightOf="@id/mainLayout2"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/aboutteam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="About Team"
+            android:textColor="#aaaac4"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            android:background="@drawable/dragicon"
+            app:layout_constraintEnd_toEndOf="@+id/aboutteam"
+            app:layout_constraintStart_toStartOf="@+id/aboutteam"
+            app:layout_constraintTop_toBottomOf="@+id/aboutteam" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_below="@id/mainLayout2"
+        android:layout_marginStart="20dp"
+        android:id="@+id/image_layout"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="15dp"
+        android:layout_height="120dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_image_card"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:elevation="-1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="15dp">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add your profile \nimage."
+                android:fontFamily="@font/montserrat"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/profile_image_card"
+                android:layout_marginTop="10dp"/>
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:id="@+id/add_profile_image"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/add_background"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/addicon"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_below="@id/image_layout"
+        android:layout_marginStart="20dp"
+        android:id="@+id/infocard"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="15dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="#000"
+                android:fontFamily="@font/montserrat"
+                android:text="Your user name."/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/usernamelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="#636363"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:hintTextColor="#636363"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:hint="User Name"
+                app:boxStrokeWidth="0.2dp"
+                android:textCursorDrawable="@drawable/black_curser">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="#000"
+                android:fontFamily="@font/montserrat"
+                android:text="Your contact number."/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/userphonelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="#636363"
+                app:hintTextColor="#636363"
+                android:layout_marginStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:hint="User Phone"
+                app:boxStrokeWidth="0.2dp"
+                android:textCursorDrawable="@drawable/black_curser">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <RelativeLayout
+        android:id="@+id/continuebtn"
+        android:layout_width="180dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:backgroundTint="#2A5FAF"
+        android:layout_below="@id/infocard"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/ic_button_back"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp"
+            android:letterSpacing="0.1"
+            android:layout_marginEnd="64dp"
+            android:fontFamily="@font/segoeui"
+            android:layout_marginBottom="28dp"
+            android:text="Continue"
+            android:textColor="#fff"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

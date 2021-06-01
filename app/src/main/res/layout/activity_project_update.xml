@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ProjectUpdateActivity">
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/arrow_back_ios"
+        app:tint="#000"
+        android:id="@+id/back_btn"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/back_btn"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#FFF"
+                android:id="@+id/project_card"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="24sp"
+                        android:maxLines="2"
+                        android:id="@+id/project_title"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/noto_sans"
+                        android:textColor="#7CE642"
+                        android:text="Project Name"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="3"
+                        android:ellipsize="end"
+                        android:id="@+id/project_description"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."/>
+
+                    <com.google.android.material.progressindicator.ProgressIndicator
+                        android:id="@+id/progressBar"
+                        style="@style/Widget.MaterialComponents.ProgressIndicator.Linear.Determinate"
+                        app:indicatorColor="#7CE642"
+                        app:trackColor="#667CE642"
+                        app:indicatorCornerRadius="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:progress="50"
+                        android:layerType="software"
+                        android:indeterminate="false"
+                        android:elevation="8dp"
+                        android:layout_height="wrap_content" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/progress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:fontFamily="@font/noto_sans"
+                            android:text="50%"
+                            android:textColor="#B3000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/progress"
+                            android:fontFamily="@font/noto_sans"
+                            android:text="Complete"
+                            android:textColor="#4D000000"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/progress"
+                            app:layout_constraintStart_toEndOf="@+id/progress" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#FFF"
+                android:layout_below="@id/project_card"
+                android:id="@+id/shareCard"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:cardCornerRadius="20dp"
+                        android:layout_below="@+id/member1_usn"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#fff">
+
+                        <pl.droidsonroids.gif.GifImageView
+                            android:layout_width="match_parent"
+                            android:id="@+id/member1_image"
+                            android:scaleType="centerCrop"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/profileimage1"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Share with your group"/>
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="5dp"
+                android:id="@+id/message_list"
+                android:layout_below="@id/shareCard"/>
+        </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardElevation="8dp"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:cardCornerRadius="20dp"
+                    android:id="@+id/sender_image_card"
+                    android:layout_margin="15dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#fff">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/sender_image"
+                        android:scaleType="centerCrop"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/profileimage5"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/sender_image_card"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sanjay AS"
+                        android:textColor="#000"
+                        android:id="@+id/sender_name"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="14sp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="03 Nov"
+                        android:id="@+id/sent_date"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/noto_sans"
+                        android:textColor="#66000000"
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                android:maxLines="3"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/text_msg"
+                android:textColor="#B3000000"
+                android:visibility="gone"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/noto_sans"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:cardElevation="8dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="20dp"
+                app:cardCornerRadius="7dp"
+                android:visibility="gone"
+                android:id="@+id/msg_image_card"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/msg_image"
+                    android:src="@drawable/placeholder"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pdf_layout"
+                android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:scaleType="centerCrop"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/pdf"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="File Name"
+                    android:id="@+id/file_name"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/noto_sans"
+                    android:textColor="@android:color/holo_blue_light"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

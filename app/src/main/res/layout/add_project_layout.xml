@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:elevation="8dp"
+        android:id="@+id/project_card"
+        android:layout_marginEnd="20dp"
+        android:visibility="visible"
+        app:cardElevation="8dp"
+        android:outlineAmbientShadowColor="#33000000"
+        android:outlineSpotShadowColor="#33000000"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardMaxElevation="8dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans"
+                android:text="Website Design"
+                android:maxLines="3"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeMaxTextSize="100sp"
+                android:autoSizeStepGranularity="2sp"
+                android:ellipsize="end"
+                android:autoSizeTextType="uniform"
+                android:id="@+id/project_name"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:strokeWidth="1dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    android:id="@+id/member1card"
+                    android:layout_centerVertical="true"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    app:strokeColor="#fff">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/member_image1"
+                        android:scaleType="centerCrop"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/profileimage1"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:strokeWidth="1dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/member2card"
+                    android:layout_toRightOf="@id/member1card"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginStart="-15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    app:strokeColor="#fff">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/member_image2"
+                        android:scaleType="centerCrop"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/profileimage5"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:strokeWidth="1dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/member3card"
+                    android:layout_toRightOf="@id/member2card"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginStart="-15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    app:strokeColor="#fff">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/member_image3"
+                        android:scaleType="centerCrop"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/profileimage4"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:strokeWidth="1dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/member4card"
+                    android:layout_toRightOf="@id/member3card"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginStart="-15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    app:strokeColor="#fff">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/member_image4"
+                        android:scaleType="centerCrop"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/profileimage6"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <com.google.android.material.progressindicator.ProgressIndicator
+                android:id="@+id/progressBar"
+                style="@style/Widget.MaterialComponents.ProgressIndicator.Linear.Determinate"
+                app:indicatorColor="#7CE642"
+                app:trackColor="#667CE642"
+                app:indicatorCornerRadius="10dp"
+                android:layout_width="match_parent"
+                android:layout_marginStart="20dp"
+                android:progress="50"
+                android:layerType="software"
+                android:indeterminate="false"
+                android:elevation="8dp"
+                android:layout_marginEnd="20dp"
+                android:layout_height="wrap_content" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="50%"
+                    android:textColor="#B3000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/progress"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="Complete"
+                    android:textColor="#4D000000"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/progress"
+                    app:layout_constraintStart_toEndOf="@+id/progress" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

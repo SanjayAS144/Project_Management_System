@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SendMessageActivity">
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/arrow_back_ios"
+        app:tint="#B3000000"
+        android:id="@+id/back_btn"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"/>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_baseline_send_24"
+        app:tint="#80000000"
+        android:id="@+id/send_btn"
+        android:layout_marginTop="20dp"
+        />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/ic_baseline_camera_alt_24"
+        app:tint="#80000000"
+        android:layout_toLeftOf="@id/send_btn"
+        android:id="@+id/add_image"
+        android:layout_marginTop="20dp"
+        />
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/ic_baseline_attachment_24"
+        app:tint="#80000000"
+        android:layout_toLeftOf="@id/add_image"
+        android:id="@+id/attach"
+        android:layout_marginTop="20dp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/back_btn"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:hint="Share with your team"
+        android:enabled="true"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:boxStrokeColor="#B95A5A5A"
+        android:textCursorDrawable="@drawable/black_curser"
+        app:hintTextColor="#7C7C7C"
+        app:placeholderTextColor="#7C7C7C">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:inputType="text"
+            android:letterSpacing="0.1"
+            android:text=" "
+            android:textSize="19sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>

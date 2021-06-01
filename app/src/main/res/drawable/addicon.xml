@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="4040dp"
+    android:height="4040dp"
+    android:viewportWidth="4040"
+    android:viewportHeight="4040">
+  <path
+      android:pathData="M2020,0L2020,0A128,128 0,0 1,2148 128L2148,3912A128,128 0,0 1,2020 4040L2020,4040A128,128 0,0 1,1892 3912L1892,128A128,128 0,0 1,2020 0z"
+      android:strokeWidth="1"
+      android:fillColor="#fff"
+      android:strokeColor="#00000000"/>
+  <path
+      android:pathData="M2020,0.5L2020,0.5A127.5,127.5 0,0 1,2147.5 128L2147.5,3912A127.5,127.5 0,0 1,2020 4039.5L2020,4039.5A127.5,127.5 0,0 1,1892.5 3912L1892.5,128A127.5,127.5 0,0 1,2020 0.5z"
+      android:strokeWidth="1"
+      android:fillColor="#00000000"
+      android:strokeColor="#707070"/>
+  <path
+      android:pathData="M4040,2020L4040,2020A128,128 0,0 1,3912 2148L128,2148A128,128 0,0 1,0 2020L0,2020A128,128 0,0 1,128 1892L3912,1892A128,128 0,0 1,4040 2020z"
+      android:strokeWidth="1"
+      android:fillColor="#fff"
+      android:strokeColor="#00000000"/>
+  <path
+      android:pathData="M4039.5,2020L4039.5,2020A127.5,127.5 0,0 1,3912 2147.5L128,2147.5A127.5,127.5 0,0 1,0.5 2020L0.5,2020A127.5,127.5 0,0 1,128 1892.5L3912,1892.5A127.5,127.5 0,0 1,4039.5 2020z"
+      android:strokeWidth="1"
+      android:fillColor="#00000000"
+      android:strokeColor="#707070"/>
+</vector>

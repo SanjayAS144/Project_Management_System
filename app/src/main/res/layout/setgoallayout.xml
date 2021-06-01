@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Set Your Goals for Today."
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/goals" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/montserrat"
+        android:text="What is your Goal?"
+        android:textColor="#808080"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Your Goal"
+        android:textCursorDrawable="@drawable/black_curser"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:boxStrokeColor="#B95A5A5A"
+        app:hintTextColor="#7C7C7C"
+        app:placeholderTextColor="#7C7C7C">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="-8dp"
+            android:fontFamily="@font/montserrat"
+            android:inputType="text"
+            android:letterSpacing="0.1"
+            android:textSize="19sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat"
+        android:text="How much percent you want to compete today?"
+        android:textColor="#808080"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Your Goal"
+        android:textCursorDrawable="@drawable/black_curser"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:boxStrokeColor="#B95A5A5A"
+        app:hintTextColor="#7C7C7C"
+        app:placeholderTextColor="#7C7C7C">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/goalPercent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="-8dp"
+            android:fontFamily="@font/montserrat"
+            android:inputType="phone"
+            android:letterSpacing="0.1"
+            android:textSize="19sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/setGoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D6E2F9"
+            android:fontFamily="@font/artifika"
+            android:text="Set"
+            android:textColor="#000" />
+
+        <Button
+            android:id="@+id/cancelGoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="#D6E2F9"
+            android:fontFamily="@font/artifika"
+            android:text="Cancel"
+            android:textColor="#000" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
